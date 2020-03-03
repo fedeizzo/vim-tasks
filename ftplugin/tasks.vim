@@ -66,8 +66,8 @@ function! NewTask(direction)
     exec 'normal >>'
   endif
 
-  exec 'normal B'
-  startinsert!
+  exec 'normal F@'
+  startinsert
 endfunc
 
 function! SetLineMarker(marker)
