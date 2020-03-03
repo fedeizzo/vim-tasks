@@ -60,11 +60,13 @@ function! NewTask(direction)
   else
     exec 'normal o' . l:text
   endif
+  call AddAttribute('created', strftime(s:dateFormat))
 
   if l:isMatch > -1
     exec 'normal >>'
   endif
 
+  exec 'normal B'
   startinsert!
 endfunc
 
